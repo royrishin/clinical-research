@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="IpEphPFKaRfbKoLDl-x7">
+    <mxGraphModel dx="873" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m02dHDwgHRxFTBHGerYb-5" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-2" target="m02dHDwgHRxFTBHGerYb-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-6" value="1. fetch images" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-5">
+          <mxGeometry x="-0.1778" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-2" value="PROGRAM A&lt;br&gt;detect-bastion-opisthion-coordinates-program" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-4" value="detect-bastion-opisthion-coordinates-program" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-7" value="database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="120" y="380" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-2" target="m02dHDwgHRxFTBHGerYb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-9" value="2. write image-id and &lt;br&gt;detected coordinates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-8">
+          <mxGeometry x="0.2923" y="1" relative="1" as="geometry">
+            <mxPoint x="9" y="-34" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-13" value="eithe files or db" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-8">
+          <mxGeometry x="0.3692" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-11" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-10" target="m02dHDwgHRxFTBHGerYb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-12" value="3. Get image coordinates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-11">
+          <mxGeometry x="0.2824" y="2" relative="1" as="geometry">
+            <mxPoint x="27" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-10" target="m02dHDwgHRxFTBHGerYb-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-19" value="4. output files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-18">
+          <mxGeometry x="-0.16" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-10" value="PROGRAM B&lt;br&gt;draw the mcrae line and saves inages&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="210" y="630" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-14" target="m02dHDwgHRxFTBHGerYb-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-16" value="5. fetch images" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-15">
+          <mxGeometry x="-0.0222" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-14" target="m02dHDwgHRxFTBHGerYb-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-27" value="7. output files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-26">
+          <mxGeometry x="-0.1462" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-14" value="PROGRAM C&lt;br&gt;detect-bastion-opisthion-coordinates-program" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="350" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-17" value="output files" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="500" y="660" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=27.5;entryPerimeter=0;" edge="1" parent="1" source="m02dHDwgHRxFTBHGerYb-14" target="m02dHDwgHRxFTBHGerYb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-24" value="6. write image-id and&lt;br&gt;detected coordinates" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="m02dHDwgHRxFTBHGerYb-22">
+          <mxGeometry x="0.1505" relative="1" as="geometry">
+            <mxPoint x="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m02dHDwgHRxFTBHGerYb-25" value="&lt;u&gt;&lt;b&gt;ITERATION 1:&lt;/b&gt;&lt;/u&gt;&lt;br&gt;In this iteration, PROGRAM A will be developed to detect the coordinates of bastion and opistion from the images. This program is not fully automated.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;u&gt;ITERATION 2:&lt;/u&gt;&lt;/b&gt;&lt;br&gt;In this iteration, automated deep learning based program shown as PROGRAM C will be used to detect the coordinates of bastion and opistion from the images.&amp;nbsp;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="580" y="120" width="260" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
