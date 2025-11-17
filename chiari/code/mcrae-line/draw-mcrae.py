@@ -1,35 +1,49 @@
-import cv2
-import numpy as np
+from PIL import Image, ImageDraw
 
-def draw_mcrae_line(image_path, basion_coords, opisthion_coords):
+def draw_mcrae_line(image_path, output_path, basion_coords, opisthion_coords):
     """
-    Loads an image and draws the McRae line between the specified coordinates.
+    Draws the McRae line on a specified image.
 
     Args:
-        image_path (str): The path to the input image file.
-        basion_coords (tuple): A tuple (x, y) for the basion point.
-        opisthion_coords (tuple): A tuple (x, y) for the opisthion point.
+        image_path (str): Path to the input medical image (e.g., 'skull_xray.jpg').
+        output_path (str): Path to save the output image with the line drawn.
+        basion_coords (tuple): (x, y) coordinates for the basion (anterior foramen magnum).
+        opisthion_coords (tuple): (x, y) coordinates for the opisthion (posterior foramen magnum).
     """
-    # Load the image
-    img = cv2.imread(image_path)
-    if img is None:
-        print(f"Error: Could not load image from {image_path}")
-        return
+    try:
+        # Open the image
+        img = Image.open(image_path).convert("RGB")
+        draw = ImageDraw.Draw(img)
 
-    # Define line parameters
-    color = (0, 255, 0)  # Green color in BGR
-    thickness = 2
+        # Define the color and width for the line
+        line_color = (255, 0, 0)  # Red color (RGB)
+        line_width = 2
 
-    # Draw the line
-    cv2.line(img, basion_coords, opisthion_coords, color, thickness)
+        # Draw the line
+        # The line connects the basion to the opisthion
+        draw.line([basion_coords, opisthion_coords], fill=line_color, width=line_width)
 
-    # Display the image with the drawn line (optional)
-    cv2.imshow("Image with McRae Line", img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+        # Save the modified image
+        img.save(output_path)
+        print(f"McRae line drawn and saved to {output_path}")
 
-# Example usage:
-# Replace 'skull_xray.png' with your image path.
-# Replace (100, 200) and (400, 200) with your actual basion and opisthion coordinates.
-# If using the manual method to get coordinates, those values would go here.
-draw_mcrae_line('skull_xray.png', (100, 200), (400, 200))
+    except FileNotFoundError:
+        print(f"Error: The file '{image_path}' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+# Placeholder coordinates (example only, adjust for your specific image):
+# Assuming basion is at (100, 250) and opisthion is at (400, 250)
+
+basion_x = 100
+basion_y = 250
+opisthion_x = 400
+opisthion_y = 250
+
+draw_mcrae_line(
+    image_path='skull_xray.jpg',
+    output_path='skull_xray_mcrae_line.jpg',
+    basion_coords=(basion_x, basion_y),
+    opisthion_coords=(opisthion_x, opisthion_y)
+)
