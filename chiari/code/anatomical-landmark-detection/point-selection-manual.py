@@ -68,8 +68,8 @@ def process_images_in_folder(folder_path):
                 elif k == 27:
                     cv2.destroyAllWindows()
                     return
-            # item = {
-            #      "image_name": {current_image_name},
+            json_dict = {
+                  "image_name": f"{current_image_name}"}
             #      "first_coords": f"{points[0][0]}, {points[0][1]}",
             #      "second_coords": f"{points[1][0]}, {points[1][1]}"
             # }
@@ -78,10 +78,23 @@ def process_images_in_folder(folder_path):
            # json_output = json.dumps(data_list, indent=4)
 
            # print(json_output)
-            f.write(f"Image: {current_image_name},")
+            json_string = json.dumps(json_dict)
+            data = json.loads(json_string)
+            count = 0
             for point in points:
-                 f.write(f"  ({point[0]}, {point[1]})\n")
-            
+                 if(count == 0 ):
+                    new_data = {"first_coords": f"{point[0]}, {point[1]}"}
+                    data.update(new_data)
+                    count = count +1
+                 elif(count == 1):
+                    new_data = {"second_coords": f"{point[0]}, {point[1]}"}
+                    data.update(new_data)
+
+                 
+            updated_json_string = json.dumps(data, indent=4)
+            #f.write(f"  ({point[0]}, {point[1]})\n")
+            f.write(f"{updated_json_string}\n")
+            #f.write(f"Image: {current_image_name},")
             cv2.destroyAllWindows()
 
 if __name__ == "__main__":
